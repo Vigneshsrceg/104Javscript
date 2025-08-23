@@ -30,7 +30,21 @@ function evennum(arr){
         }
     }
     console.log("The even numbers are: " + nbr.join(", ")); //join is extra to display the outpu in better
-    console.log("The odd numbers are: " + nbr1);
+
+
+}
+
+function oddnum(arr){
+ let nbr=[],nbr1= [];
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] % 2 != 0){
+            nbr.push(arr[i]);
+        }
+        else{
+            nbr1.push(arr[i]);
+        }
+    }
+    console.log("The Odd numbers are: " + nbr.join(", ")); //join is extra to display the outpu in better
 
 
 }
@@ -43,5 +57,8 @@ console.log("The sum of " + num1 + " and " + num2 + " is: " + calcsum(num1, num2
 console.log("The Multiple of " + num1 + " and " + num2 + " is: " + calcmul(num1, num2).toFixed(2));
 console.log("The square of " + num1 + " and " + num2 + " is: " + sqrenum(num1, num2).toFixed(2));
 console.log("The average of the array is: " + avgnum(num).toFixed(2));
+
 //calling funcation to get even and odd numbers and console log the result
  evennum(num);
+ oddnum(num);
+
