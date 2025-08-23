@@ -29,7 +29,7 @@ function evennum(arr){
             nbr1.push(arr[i]);
         }
     }
-    console.log("The even numbers are: " + nbr);
+    console.log("The even numbers are: " + nbr.join(", ")); //join is extra to display the outpu in better
     console.log("The odd numbers are: " + nbr1);
 
 
