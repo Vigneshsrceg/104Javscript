@@ -1,3 +1,44 @@
+function useracct(uname,pwd){
+
+    let _uname=uname;
+    let _pwd=pwd;
+
+    function getuname(){
+        return _uname;
+    }
+    function changeuname(newuname){
+        _uname=newuname;
+        console.log("username changed successfully");
+    }
+
+    function getpwd(){
+        return _pwd;
+    }
+
+    function changepwd(newpwd){
+        _pwd=newpwd;
+        console.log("password changed successfully");
+    }
+
+    return{
+        getuname:getuname,
+        changeuname:changeuname,
+        getpwd:getpwd,
+        changepwd:changepwd
+    }
+
+}
+
+console.log('*******************Encapsulation example3***********************');
+let mycred=useracct("admin","12345");
+console.log(`username: ${mycred.getuname()}`);
+console.log(`password: ${mycred.getpwd()}`);
+mycred.changeuname("newadmin");
+mycred.changepwd("67890");
+
+console.log(`updated username: ${mycred.getuname()}`);
+console.log(`updated password: ${mycred.getpwd()}`);
+/*
 //encapsulation for username and password
 function UserAccount(username, password) {
 let _username = username; // Private variable
@@ -39,3 +80,4 @@ console.log(`Updated Password: ${myAccount.getPassword()}`); // Accessing update
 // Trying to access the private variables directly  
 console.log(myAccount._username); // Output: undefined (cannot access private _username)
 console.log(myAccount._password); // Output: undefined (cannot access private _password)  
+*/
